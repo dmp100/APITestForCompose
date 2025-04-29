@@ -56,4 +56,26 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    // Retrofit 및 OkHttp 라이브러리 (기존 코드에서 필요한 부분)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+
+    // XML 파싱을 위한 의존성 추가
+    implementation("com.squareup.retrofit2:converter-simplexml:2.9.0")
+    // Coil (이미지 로딩)
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+
+//    // 1. buildgradle 설정 변경
+//    // 기존 라이브러리들 유지
+//    implementation(libs.retrofit)
+//    implementation(libs.retrofit.gson)
+//    implementation(libs.`okhttp-logging`)
+//
+//    // Glide 대신 Compose에 최적화된 Coil 사용
+//    implementation(libs.coil.compose)
+
 }
